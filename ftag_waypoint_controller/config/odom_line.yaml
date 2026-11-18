@@ -1,0 +1,23 @@
+odom_line_controller:
+  ros__parameters:
+    odom_topic: /odom
+    cmd_vel_topic: /cmd_vel
+
+    # The route starts at the odometry pose captured when enabled becomes true.
+    distance_m: 3.60
+
+    control_rate_hz: 20.0
+    max_linear_mps: 0.15
+    max_angular_rps: 0.20
+    linear_gain: 2.0
+    angular_gain: 1.0
+
+    waypoint_spacing_m: 4.00
+    acceptance_radius_m: 0.20
+    end_tolerance_m: 0.08
+    max_cross_track_m: 1.00
+    odom_timeout_s: 0.50
+    max_run_time_s: 90.0
+
+    # Starting the launch file never moves the robot.
+    enabled: false

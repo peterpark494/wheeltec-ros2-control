@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.venv/
+build/
+install/
+log/
+output/
+tmp/
+*.db3*
+*.mcap
+*.zip
+*.tar.gz
+*_plot_package*/
+/fault_trajectory_points.txt
+.env*

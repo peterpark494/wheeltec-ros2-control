@@ -1,0 +1,19 @@
+/odom_curve_controller:
+  ros__parameters:
+    acceptance_radius_m: 0.16
+    angular_gain: 1.5
+    cmd_vel_topic: /cmd_vel_nominal
+    control_rate_hz: 20.0
+    curve_coefficient: 0.05
+    enabled: false
+    end_tolerance_m: 0.1
+    linear_gain: 6.0
+    max_angular_rps: 0.25
+    max_cross_track_m: 0.8
+    max_linear_mps: 0.15
+    max_run_time_s: 90.0
+    odom_timeout_s: 0.5
+    odom_topic: /odom
+    use_sim_time: false
+    waypoint_spacing_m: 0.2
+    x_length_m: 3.2

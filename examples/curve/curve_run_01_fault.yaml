@@ -1,0 +1,16 @@
+/front_left_fault_injector:
+  ros__parameters:
+    allocated_cmd_vel_topic: /cmd_vel_allocated
+    command_timeout_s: 0.5
+    compensation_gain: 0.6
+    decay_per_s: 0.04
+    effectiveness_topic: /fault/effectiveness
+    fault_enabled: false
+    input_cmd_vel_topic: /cmd_vel_nominal
+    kinematic_span_m: 0.36
+    max_output_angular_rps: 0.3
+    max_output_linear_mps: 0.2
+    max_wheel_linear_mps: 0.2
+    minimum_effectiveness: 0.7
+    output_cmd_vel_topic: /cmd_vel
+    use_sim_time: false

@@ -1,0 +1,28 @@
+front_left_fault_injector:
+  ros__parameters:
+    input_cmd_vel_topic: /cmd_vel_nominal
+    output_cmd_vel_topic: /cmd_vel
+    allocated_cmd_vel_topic: /cmd_vel_allocated
+    effectiveness_topic: /fault/effectiveness
+
+    # Equation (65): lambda_1=max(0.70, 1-0.04*t).
+    # The clock begins with the first nonzero nominal command.
+    fault_enabled: false
+    minimum_effectiveness: 0.70
+    decay_per_s: 0.04
+
+    # Mini 4WD firmware: wheel spacing 0.187m + axle spacing 0.173m.
+    kinematic_span_m: 0.360
+
+    # Bounded left/right allocation. At lambda=0.70, a 0.15 m/s straight
+    # reference needs about 0.1765 m/s on the commanded left side.
+    max_wheel_linear_mps: 0.20
+
+    # Fraction of the ideal left/right reallocation realised through the
+    # chassis Twist interface. 1.0 is the ideal mathematical model; 0.80
+    # retains a visible residual fault representative of modelling mismatch.
+    compensation_gain: 0.80
+
+    command_timeout_s: 0.50
+    max_output_linear_mps: 0.20
+    max_output_angular_rps: 0.30

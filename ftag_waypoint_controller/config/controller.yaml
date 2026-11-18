@@ -1,0 +1,14 @@
+ftag_waypoint_controller:
+  ros__parameters:
+    odom_topic: /odom
+    cmd_vel_topic: /cmd_vel
+    control_rate_hz: 20.0
+    max_linear_mps: 0.10
+    max_angular_rps: 0.35
+    linear_gain: 2.0
+    angular_gain: 1.5
+    heading_gate_rad: 0.8
+    acceptance_radius_m: 0.12
+    odom_timeout_s: 0.5
+    relative_to_start: true
+    enabled: false

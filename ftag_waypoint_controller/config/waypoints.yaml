@@ -1,0 +1,5 @@
+ftag_waypoint_controller:
+  ros__parameters:
+    # Metres relative to robot pose when enabled becomes true.
+    waypoints_x: [0.5]
+    waypoints_y: [0.0]
